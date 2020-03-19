@@ -15,4 +15,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/test/my/{id}', 'PhotoController@index')->middleware('my');
+Route::get('/test/my/{id}', 'PhotoController@index');
+
+Route::get('post/create', 'PostController@create');
+
+Route::post('post', 'PostController@store');
